@@ -1,4 +1,4 @@
-
+import './New.css';
 export default function New2(){
     return(
         <>

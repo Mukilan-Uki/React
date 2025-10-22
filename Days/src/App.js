@@ -1,12 +1,10 @@
-import Table1 from "./components/day5/table";
+import Calculate from './components/day6/Calculate';
+import Hooks from './components/day6/Hooks';
 
 function App() {
-  const Table={
-    table1:['Emp ID','E001','E002','E003','E004','E005']
-  }
   return (
     <>
-    <Table1 data={Table}></Table1>
+      <Hooks></Hooks>
     </>
   );
 }
