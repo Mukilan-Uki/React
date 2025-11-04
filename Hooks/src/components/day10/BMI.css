@@ -1,20 +1,21 @@
 form{
+    margin-left: 120px;
     background-color: #e5e5e5;
     border-radius: 20px;
     color: #354f52;
-    font-weight: 800;
     padding: 20px;
 }
 button{
     background-color: #354f52;
     color: #e5e5e5;
-    display: flex;
-    justify-content: center;
-   border-radius: 20% ;
 }
-div{
+.finalData{
     background-color: #cce3de;
     border-radius: 10px;
     margin-top: 50px;
     padding: 10px;
+}
+.cal{
+    display: flex;
+    justify-content: center;
 }

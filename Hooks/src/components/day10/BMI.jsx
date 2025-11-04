@@ -24,7 +24,7 @@ export default function BMI(){
             alert("Fill it ra Labade");
         }
 
-        let bmi=formData.kg/(Math.pow(formData.cm,2)/100/100);
+        let bmi=formData.kg/(Math.pow(formData.cm/100,2));
         setBmiData(bmi.toFixed(1));
 
         if(bmi<18.5){
@@ -40,28 +40,29 @@ export default function BMI(){
             setStatus("Obesity");
         }
         else{
-            setStatus("Undifined");
+            setStatus("Invalid input");
         }
     }
 
     return(
         <form style={{height:"500px", width:"400px"}}>
         <h1 className="text-center">BMI Calculater</h1><br/>
-        <label className="form-label">Weight (kg)</label>
+        <label className="form-label fw-bold">Weight (kg)</label>
         <input type="number" name="kg" className="form-control" value={formData.kg} onChange={handleChange} /><br/>
-        <label className="form-label">Height (cm)</label>
+        <label className="form-label fw-bold">Height (cm)</label>
         <input type="number" name="cm" className="form-control" value={formData.cm} onChange={handleChange} /><br/>
-        <button onClick={handleSubmit} style={{borderRadius:'30px',border:"none",padding:"5px",display:"flex",alignItems:"center",justifyContent:"center"}}>Submit</button>
-        
-        <div className="text-center">
+        <div className="cal">
+            <button onClick={handleSubmit} style={{borderRadius:'10px',border:"none",padding:"8px",display:"flex",alignItems:"center",justifyContent:"center"}}>Calculate</button>
+        </div>
+        <div className="text-center finalData">
             {bmiData &&(
                 <>
-            <p>Your BMI: {bmiData}</p>
+            <p>Your BMI: <b>{bmiData}</b></p>
             </>
             )
 }
             {status &&(
-                <p>Status: {status}</p>
+                <p>Status: <b>{status}</b></p>
             )
         }
         </div>
