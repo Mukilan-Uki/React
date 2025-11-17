@@ -1,0 +1,33 @@
+ul{
+    display: flex;
+    list-style: none;
+}
+.top{
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+li{
+    margin-left: 10px;
+}
+.img1{
+    filter: brightness(20%);
+}
+.productImg{
+    height: 150px;
+    width: 265px;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 10px;
+}
+.contant{
+    position: relative;
+    top: 200px;
+}
+.img1{
+    position: absolute;
+}
+.middle2{
+    position: relative;
+    top: 700px;
+}
