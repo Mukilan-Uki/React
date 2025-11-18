@@ -1,0 +1,61 @@
+li{
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.top{
+    justify-content: center;
+}
+.nav{
+    margin-left: 100px;
+    margin-right: 400px;
+    margin-top: 20px;
+}
+.call{
+    margin-top: 10px;
+    margin-left: 80px;
+}
+.callImg{
+    width: 40px;
+    height: 40px;
+}
+.body{
+   background-color: #f5f5f5;
+}
+.left{
+    transform: rotate(-90deg);
+    transform-origin: left;
+    position: relative;
+    top: 300px;
+    left: 55px;
+}
+.lineImg{
+    width: 250px;
+}
+.mukilan{
+    position: absolute;
+    z-index: 2;
+    height: 600px;
+    top: 50px;
+    right: 40px;
+    filter: grayscale(100%);
+}
+.name{
+    font-size: 180px;
+}
+.nameSub{
+    font-size: 20px;
+}
+.middle1{
+    position: absolute;
+    top: 120px;
+    left: 150px;
+}
+.logo{
+    position: absolute;
+    left: 20px;
+}
