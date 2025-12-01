@@ -1,38 +1,515 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
 .App {
+  min-height: 100vh;
+}
+
+/* ===== HEADER STYLES ===== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.call-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: white;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+.call-cta img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== SECTION COMMON STYLES ===== */
+section {
+  min-height: 100vh;
+  padding: 80px 2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== HERO SECTION ===== */
+#home {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.stat-number {
+  font-size: 4rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero-content {
+  text-align: center;
+}
+
+.hero-name {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.scroll-down {
+  margin-top: 3rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ===== ABOUT SECTION ===== */
+#about {
+  background: white;
+  padding-top: 100px;
+}
+
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-stats {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 2rem;
+}
+
+.stat-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-percent {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #007bff;
+  display: block;
+}
+
+.stat-desc {
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* ===== SKILLS SECTION ===== */
+#skills {
+  background: #f8f9fa;
+  padding-top: 100px;
+}
+
+.skills-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.skill-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skill-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* ===== PROJECTS SECTION ===== */
+#project {
+  background: white;
+  padding-top: 100px;
+}
+
+.projects-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-subtitle {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.project-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-box {
+  background: white;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1;
+}
+
+.stat-percent-small {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+}
+
+.stat-label-small {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background: #007bff;
   color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
 }
 
-.App-link {
-  color: #61dafb;
+.view-btn {
+  background: #000;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ===== CONTACT SECTION ===== */
+#contact {
+  background: #f8f9fa;
+  padding-top: 100px;
+}
+
+.contact-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: #000;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .nav {
+      flex-direction: column;
+      gap: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links {
+      gap: 1rem;
   }
+
+  .hero-name {
+      font-size: 4rem;
+  }
+
+  .stat-number {
+      font-size: 3rem;
+  }
+
+  .about-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
+  .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
+  .form-row {
+      grid-template-columns: 1fr;
+  }
+
+  section {
+      padding: 100px 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+      font-size: 3rem;
+  }
+
+  .hero-stats {
+      gap: 1.5rem;
+  }
+
+  .about-title,
+  .skills-title,
+  .projects-title,
+  .contact-title {
+      font-size: 2rem;
+  }
+
+  .projects-grid {
+      grid-template-columns: 1fr;
+  }
+}
+/* Add to your existing CSS */
+
+/* Skills Section Styles */
+.skill-level {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* About Section Updates */
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submit-btn {
+  background: #000;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #333;
+}
+
+/* Project Cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.view-btn {
+  transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+  background: #333;
 }
