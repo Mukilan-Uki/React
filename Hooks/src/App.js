@@ -1,11 +1,10 @@
-import Task from './components/Exercise/day13/Task';
-import '../../Hooks/src/components/Exercise/day13/styles.css'
-import Data from './components/Assignment/Data';
+import ColorBox from "./components/Exercise/day14/ColorBox";
+import './components/Exercise/day14/ColorBox.css'
 
 function App() {
   return (
     <>
-      <Data></Data>
+      <ColorBox></ColorBox>
     </>
   );
 }
